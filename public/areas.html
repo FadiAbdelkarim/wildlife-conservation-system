@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Protected Areas</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body onload="loadAreas()">
+<!-- ===================================== -->
+<!-- NAVIGATION BAR -->
+<!-- ===================================== -->
+
+<div class="navbar">
+
+    <a href="index.html">Home</a>
+
+    <a href="animals.html">Animals</a>
+
+    <a href="rangers.html">Rangers</a>
+
+    <a href="areas.html">Protected Areas</a>
+
+    <a href="sightings.html">Sightings</a>
+
+    <a href="reports.html">Reports</a>
+
+</div>
+<div class="container">
+
+    <h1>Protected Areas</h1>
+
+    <h3>Add Area</h3>
+
+    <input type="number" id="areaId" placeholder="Area ID">
+    <input type="text" id="areaName" placeholder="Area Name">
+    <input type="text" id="location" placeholder="Location">
+    <input type="number" id="size" placeholder="Size">
+
+    <button onclick="addArea()">Add Area</button>
+
+    <h3>Delete Area</h3>
+
+    <input type="number" id="deleteAreaId" placeholder="Area ID">
+
+    <button onclick="deleteArea()">Delete Area</button>
+
+    <table>
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Name</th>
+                <th>Location</th>
+                <th>Size</th>
+            </tr>
+        </thead>
+
+        <tbody id="areaTable"></tbody>
+    </table>
+
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js"></script>
+<script src="app.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Sightings Management</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body onload="loadSightings()">
+<!-- ===================================== -->
+<!-- NAVIGATION BAR -->
+<!-- ===================================== -->
+
+<div class="navbar">
+
+    <a href="index.html">Home</a>
+
+    <a href="animals.html">Animals</a>
+
+    <a href="rangers.html">Rangers</a>
+
+    <a href="areas.html">Protected Areas</a>
+
+    <a href="sightings.html">Sightings</a>
+
+    <a href="reports.html">Reports</a>
+
+</div>
+<div class="container">
+
+    <h1>Sightings Management</h1>
+
+    <!-- ===================================== -->
+    <!-- ADD SIGHTING -->
+    <!-- ===================================== -->
+
+    <h3>Add Sighting</h3>
+
+    <input type="number" id="sightingId" placeholder="Sighting ID">
+    <input type="number" id="animalId" placeholder="Animal ID">
+    <input type="number" id="sightingRangerId" placeholder="Ranger ID">
+    <input type="number" id="sightingAreaId" placeholder="Area ID">
+    <input type="date" id="date">
+    <input type="number" id="animalCount" placeholder="Animal Count">
+
+    <button onclick="addSighting()">Add Sighting</button>
+
+    <!-- ===================================== -->
+    <!-- DELETE SIGHTING -->
+    <!-- ===================================== -->
+
+    <h3>Delete Sighting</h3>
+
+    <input type="number" id="deleteSightingId" placeholder="Sighting ID">
+
+    <button onclick="deleteSighting()">Delete Sighting</button>
+
+    <!-- ===================================== -->
+    <!-- UPDATE SIGHTING -->
+    <!-- ===================================== -->
+
+    <h3>Update Animal Count</h3>
+
+    <input type="number" id="updateSightingId" placeholder="Sighting ID">
+    <input type="number" id="updateAnimalCount" placeholder="New Animal Count">
+
+    <button onclick="updateSighting()">Update Sighting</button>
+
+    <!-- ===================================== -->
+    <!-- SIGHTINGS TABLE -->
+    <!-- ===================================== -->
+
+    <h3>All Sightings</h3>
+
+    <table>
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Animal ID</th>
+                <th>Ranger ID</th>
+                <th>Area ID</th>
+                <th>Date</th>
+                <th>Count</th>
+            </tr>
+        </thead>
+
+        <tbody id="sightingTable"></tbody>
+
+    </table>
+
+</div>
+
+<!-- ===================================== -->
+<!-- SUPABASE CDN -->
+<!-- ===================================== -->
+
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js"></script>
+
+<!-- ===================================== -->
+<!-- APP JS -->
+<!-- ===================================== -->
+
+<script src="app.js"></script>
+
+</body>
+</html>

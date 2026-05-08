@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Animals Management</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body onload="loadAnimals()">
+<!-- ===================================== -->
+<!-- NAVIGATION BAR -->
+<!-- ===================================== -->
+
+<div class="navbar">
+
+    <a href="index.html">Home</a>
+
+    <a href="animals.html">Animals</a>
+
+    <a href="rangers.html">Rangers</a>
+
+    <a href="areas.html">Protected Areas</a>
+
+    <a href="sightings.html">Sightings</a>
+
+    <a href="reports.html">Reports</a>
+
+</div>
+<div class="container">
+
+    <h1>Animals Management</h1>
+
+    <h3>Add Animal</h3>
+
+    <input type="text" id="species" placeholder="Species">
+    <input type="text" id="status" placeholder="Status">
+    <input type="number" id="population" placeholder="Population">
+
+    <button onclick="addAnimal()">Add Animal</button>
+
+    <h3>Delete Animal</h3>
+
+    <input type="number" id="deleteId" placeholder="Animal ID">
+
+    <button onclick="deleteAnimal()">Delete Animal</button>
+
+    <h3>Animals List</h3>
+
+    <table>
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Species</th>
+                <th>Status</th>
+                <th>Population</th>
+            </tr>
+        </thead>
+
+        <tbody id="animalTable"></tbody>
+    </table>
+
+
+    <!-- ===================================== -->
+<!-- UPDATE ANIMAL -->
+<!-- ===================================== -->
+
+<h3>Update Animal</h3>
+
+<input type="number" id="updateAnimalId" placeholder="Animal ID">
+
+<input type="text" id="updateSpecies" placeholder="New Species">
+
+<input type="text" id="updateStatus" placeholder="New Status">
+
+<input type="number" id="updatePopulation" placeholder="New Population">
+
+<button onclick="updateAnimal()">
+    Update Animal
+</button>
+
+
+</div>
+
+
+
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js"></script>
+<script src="app.js"></script>
+
+</body>
+</html>

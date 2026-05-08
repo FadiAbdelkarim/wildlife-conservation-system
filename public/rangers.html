@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Rangers Management</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body onload="loadRangers()">
+<!-- ===================================== -->
+<!-- NAVIGATION BAR -->
+<!-- ===================================== -->
+
+<div class="navbar">
+
+    <a href="index.html">Home</a>
+
+    <a href="animals.html">Animals</a>
+
+    <a href="rangers.html">Rangers</a>
+
+    <a href="areas.html">Protected Areas</a>
+
+    <a href="sightings.html">Sightings</a>
+
+    <a href="reports.html">Reports</a>
+
+</div>
+<div class="container">
+
+    <h1>Rangers Management</h1>
+
+    <h3>Add Ranger</h3>
+
+    <input type="number" id="rangerId" placeholder="Ranger ID">
+    <input type="text" id="rangerName" placeholder="Ranger Name">
+    <input type="number" id="rangerArea" placeholder="Area ID">
+
+    <button onclick="addRanger()">Add Ranger</button>
+
+    <h3>Delete Ranger</h3>
+
+    <input type="number" id="deleteRangerId" placeholder="Ranger ID">
+
+    <button onclick="deleteRanger()">Delete Ranger</button>
+
+    <table>
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Name</th>
+                <th>Area ID</th>
+            </tr>
+        </thead>
+
+        <tbody id="rangerTable"></tbody>
+    </table>
+
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js"></script>
+<script src="app.js"></script>
+
+</body>
+</html>
