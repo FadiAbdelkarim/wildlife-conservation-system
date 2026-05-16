@@ -1,15 +1,11 @@
--- =========================================
--- 1. USER ROLES TABLE
--- =========================================
+
 
 CREATE TABLE "UserRoles" (
     role_id SERIAL PRIMARY KEY,
     role_name VARCHAR(50) UNIQUE NOT NULL
 );
 
--- =========================================
--- 2. USERS TABLE
--- =========================================
+
 
 CREATE TABLE "Users" (
     user_id SERIAL PRIMARY KEY,
@@ -24,9 +20,7 @@ CREATE TABLE "Users" (
         ON DELETE SET NULL
 );
 
--- =========================================
--- 3. PROTECTED AREAS TABLE
--- =========================================
+
 
 CREATE TABLE "ProtectedAreas" (
     area_id SERIAL PRIMARY KEY,
@@ -35,9 +29,7 @@ CREATE TABLE "ProtectedAreas" (
     size DECIMAL(10,2)
 );
 
--- =========================================
--- 4. RANGERS TABLE
--- =========================================
+
 
 CREATE TABLE "Rangers" (
     ranger_id SERIAL PRIMARY KEY,
@@ -50,9 +42,7 @@ CREATE TABLE "Rangers" (
         ON DELETE SET NULL
 );
 
--- =========================================
--- 5. ANIMALS TABLE
--- =========================================
+
 
 CREATE TABLE "Animals" (
     animal_id SERIAL PRIMARY KEY,
@@ -61,9 +51,7 @@ CREATE TABLE "Animals" (
     population_estimate INT DEFAULT 0
 );
 
--- =========================================
--- 6. SIGHTINGS TABLE
--- =========================================
+
 
 CREATE TABLE "Sightings" (
     sighting_id SERIAL PRIMARY KEY,
@@ -89,9 +77,7 @@ CREATE TABLE "Sightings" (
         ON DELETE SET NULL
 );
 
--- =========================================
--- 7. CONSERVATION PROJECTS TABLE
--- =========================================
+
 
 CREATE TABLE "ConservationProjects" (
     project_id SERIAL PRIMARY KEY,
