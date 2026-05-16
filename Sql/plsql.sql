@@ -1,7 +1,3 @@
--- =========================================
--- PL/pgSQL BLOCK 1
--- Function to count animals
--- =========================================
 
 CREATE OR REPLACE FUNCTION get_total_animals()
 RETURNS INTEGER AS
@@ -19,10 +15,7 @@ BEGIN
 END;
 $$ LANGUAGE plpgsql;
 
--- =========================================
--- PL/pgSQL BLOCK 2
--- Function to get total sightings
--- =========================================
+
 
 CREATE OR REPLACE FUNCTION get_total_sightings()
 RETURNS INTEGER AS
@@ -40,10 +33,7 @@ BEGIN
 END;
 $$ LANGUAGE plpgsql;
 
--- =========================================
--- PL/pgSQL BLOCK 3
--- Procedure to add animal
--- =========================================
+
 
 CREATE OR REPLACE PROCEDURE add_new_animal(
     p_species VARCHAR,
@@ -64,10 +54,7 @@ BEGIN
 END;
 $$;
 
--- =========================================
--- PL/pgSQL BLOCK 4
--- Trigger Function
--- =========================================
+
 
 CREATE OR REPLACE FUNCTION animal_insert_message()
 RETURNS TRIGGER AS
@@ -81,10 +68,7 @@ BEGIN
 END;
 $$ LANGUAGE plpgsql;
 
--- =========================================
--- PL/pgSQL BLOCK 5
--- Trigger
--- =========================================
+
 
 CREATE TRIGGER animal_insert_trigger
 
