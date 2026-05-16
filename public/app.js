@@ -1,4 +1,4 @@
-// public/app.js
+
 const SUPABASE_URL = 'https://wkmcoijcpvtlhxegylgf.supabase.co';
 const SUPABASE_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6IndrbWNvaWpjcHZ0bGh4ZWd5bGdmIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NzgwOTg3OTAsImV4cCI6MjA5MzY3NDc5MH0.x1RTDvZk1fWkO_emqFLncJECAT6XA57yYtH347cQfH0';
 const supabaseClient = supabase.createClient(SUPABASE_URL, SUPABASE_KEY);
@@ -23,9 +23,7 @@ function clearFields(ids) {
   });
 }
 
-// =====================================
-// ANIMALS
-// =====================================
+
 
 async function loadAnimals() {
   const table = document.getElementById('animalTable');
@@ -119,9 +117,7 @@ async function updateAnimal() {
   await loadAnimals();
 }
 
-// =====================================
-// RANGERS
-// =====================================
+
 
 async function loadRangers() {
   const table = document.getElementById('rangerTable');
@@ -189,9 +185,6 @@ async function deleteRanger() {
   await loadRangers();
 }
 
-// =====================================
-// AREAS
-// =====================================
 
 async function loadAreas() {
   const table = document.getElementById('areaTable');
@@ -263,9 +256,7 @@ async function deleteArea() {
   await loadAreas();
 }
 
-// =====================================
-// SIGHTINGS
-// =====================================
+
 
 async function loadSightings() {
   const table = document.getElementById('sightingTable');
