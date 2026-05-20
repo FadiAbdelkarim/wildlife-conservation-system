@@ -155,7 +155,7 @@ async function addRanger() {
   if (rangerArea === null) return alert('Area ID is required');
 
   const { error } = await supabaseClient
-    .from('Ranges')
+    .from('Rangers')
     .insert([{
       ranger_id: rangerId,
       ranger_name: rangerName,
